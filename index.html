@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anushka Parkhi | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f8f8;
+        }
+        
+        .diagonal-box {
+            position: relative;
+            padding: 4rem 0;
+            overflow: hidden;
+        }
+        
+        .diagonal-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: white;
+            transform: skewY(-5deg);
+            transform-origin: top right;
+            z-index: -1;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: black;
+            left: -8px;
+            top: 0;
+        }
+        
+        .skill-pill {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid black;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-icon:hover {
+            transform: scale(1.1);
+        }
+        
+        .hexagon {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-xl font-bold">ANUSHKA PARKHI</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="hover:text-gray-600">About</a>
+                    <a href="#education" class="hover:text-gray-600">Education</a>
+                    <a href="#projects" class="hover:text-gray-600">Projects</a>
+                    <a href="#expertise" class="hover:text-gray-600">Expertise</a>
+                    <a href="#contact" class="hover:text-gray-600">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#about" class="block py-2 hover:text-gray-600">About</a>
+            <a href="#education" class="block py-2 hover:text-gray-600">Education</a>
+            <a href="#projects" class="block py-2 hover:text-gray-600">Projects</a>
+            <a href="#expertise" class="block py-2 hover:text-gray-600">Expertise</a>
+            <a href="#contact" class="block py-2 hover:text-gray-600">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="diagonal-box pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">ANUSHKA BHAYAJI PARKHI</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-4">Electronics & Telecommunication Engineer</h2>
+                    <p class="text-lg mb-6">A passionate individual eager to learn new things and become the best version of myself.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition">Contact Me</a>
+                        <a href="#projects" class="border border-black px-6 py-2 rounded hover:bg-gray-100 transition">View Projects</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="hexagon bg-gray-200 w-64 h-64 flex items-center justify-center">
+                        <img src="images/photo.jpg" alt="Profile" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">BRIEF SUMMARY</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center text-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <p class="text-lg mb-6">
+                        I am a final year B.Tech student specializing in Electronics and Telecommunication Engineering at MIT Academy of Engineering, Pune with a CGPA of 9.0/10.
+                    </p>
+                    <p class="text-lg mb-6">
+                        My technical expertise spans across Embedded C, MATLAB, Simulink, Python, and Machine Learning fundamentals. I'm passionate about applying my knowledge to solve real-world problems.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">EDUCATION & INTERNSHIPS</h2>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-4 md:left-1/2 h-full w-0.5 bg-black"></div>
+                
+                <!-- Timeline items -->
+                <div class="space-y-12">
+                    <!-- Education 1 -->
+                    <div class="relative pl-12 md:pl-0 md:w-1/2 md:ml-auto md:pr-12 timeline-item">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-semibold">MIT Academy of Engineering, Pune</h3>
+                                <span class="bg-black text-white px-3 py-1 text-sm rounded">2021 - 2025</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">B.Tech. - Electronics and Telecommunication Engineering</p>
+                            <p class="font-medium">CGPA: 8.90 / 10</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Education 2 -->
+                    <div class="relative pl-12 md:pl-0 md:w-1/2 md:mr-auto md:pl-12 timeline-item">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-semibold">Narayana Junior College</h3>
+                                <span class="bg-black text-white px-3 py-1 text-sm rounded">2021</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">12th | Telangana State Board of Intermediate Education</p>
+                            <p class="font-medium">Percentage: 91 / 100</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Education 3 -->
+                    <div class="relative pl-12 md:pl-0 md:w-1/2 md:ml-auto md:pr-12 timeline-item">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-semibold">Narayana Vidyalayam Chandrapur</h3>
+                                <span class="bg-black text-white px-3 py-1 text-sm rounded">2019</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">10th | CBSE</p>
+                            <p class="font-medium">Percentage: 89.40 / 100</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Internship -->
+                    <div class="relative pl-12 md:pl-0 md:w-1/2 md:mr-auto md:pl-12 timeline-item">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-semibold">Stypix</h3>
+                                <span class="bg-black text-white px-3 py-1 text-sm rounded">Jun 2024 - Jul 2024</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">Data Analysis Intern</p>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Worked on data preprocessing and visualization</li>
+                                <li>Created visual representations to uncover patterns and insights</li>
+                                <li>Explored Python for data handling and analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">PROJECTS & PUBLICATIONS</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Automatic Lane Change System</h3>
+                    <p class="text-sm text-gray-600 mb-4">Mentor: Dr. Aniket Gundecha | Team Size: 3</p>
+                    <p class="mb-4">Implementing lane change feature using ADAS (Advanced Driver Assistance System) technology to reduce accidents caused by human errors.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-pill bg-black text-white px-3 py-1 text-xs rounded-full">MATLAB</span>
+                        <span class="skill-pill bg-black text-white px-3 py-1 text-xs rounded-full">Simulink</span>
+                        <span class="skill-pill bg-black text-white px-3 py-1 text-xs rounded-full">Embedded Systems</span>
+                    </div>
+                    <p class="text-sm italic">Hardware-software co-simulation using MATLAB and Simulink with real-time sensor data processing.</p>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Remaining Battery Life Prediction</h3>
+                    <p class="text-sm text-gray-600 mb-4">Mentor: Dr. Smita Kulkarni | Team Size: 4</p>
+                    <p class="mb-4">Machine learning system to predict remaining battery life by analyzing usage patterns, environmental conditions, and device specifications.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-pill bg-black text-white px-3 py-1 text-xs rounded-full">Machine Learning</span>
+                        <span class="skill-pill bg-black text-white px-3 py-1 text-xs rounded-full">Python</span>
+                        <span class="skill-pill bg-black text-white px-3 py-1 text-xs rounded-full">Data Analysis</span>
+                    </div>
+                    <p class="text-sm italic">Random Forest model identified as most accurate for battery life prediction.</p>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Over Voltage Protection Circuit</h3>
+                    <p class="text-sm text-gray-600 mb-4">Mentor: Dr. Satyajit Chincholkar | Team Size: 2</p>
+                    <p class="mb-4">Circuit using PNP transistors and zener diodes to protect loads from voltage above 12V by diverting current flow.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-pill bg-black text-white px-3 py-1 text-xs rounded-full">Circuit Design</span>
+                        <span class="skill-pill bg-black text-white px-3 py-1 text-xs rounded-full">Electronics</span>
+                        <span class="skill-pill bg-black text-white px-3 py-1 text-xs rounded-full">Hardware Prototyping</span>
+                    </div>
+                    <p class="text-sm italic">Protection capacity can be changed by replacing the zener diode.</p>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Library Management System</h3>
+                    <p class="text-sm text-gray-600 mb-4">Mentor: Prof. Shridhar Khandekar | Team Size: 1</p>
+                    <p class="mb-4">C language system to efficiently track and manage book records with features like searching, updating, and password-protected access.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-pill bg-black text-white px-3 py-1 text-xs rounded-full">C Programming</span>
+                        <span class="skill-pill bg-black text-white px-3 py-1 text-xs rounded-full">Data Structures</span>
+                        <span class="skill-pill bg-black text-white px-3 py-1 text-xs rounded-full">System Design</span>
+                    </div>
+                    <p class="text-sm italic">Reduces manual errors and improves library operations efficiency.</p>
+                </div>
+            </div>
+            
+            <!-- Publications -->
+            <div class="mt-12 bg-gray-100 p-6 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-4">PUBLICATIONS</h3>
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-lg font-medium">Metaheuristic-Based Machine Learning Models for Accurate Battery Remaining Useful Life Prediction</h4>
+                        <p class="text-sm text-gray-600 mb-2">Sigma Journal of Engineering and Natural Sciences | 2024 | Mentor: Dr. Smita Kulkarni</p>
+                        <p class="mb-2">Research involved collecting and preprocessing battery performance data, evaluating machine learning models including Random Forest, SVM, and XGBoost for accurate battery life prediction.</p>
+                        <a href="https://eds.yildiz.edu.tr/sigma/Announcements/85" class="text-black underline hover:text-gray-700">View Publication</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-gray-100 p-6 rounded-lg">
+                <div class="space-y-4">
+            
+                    <!-- Second Publication -->
+                    <div>
+                        <h4 class="text-lg font-medium">
+                            Improving Potato Disease Classification with Convolutional Neural Networks and Feature Fusion
+                        </h4>
+                        <p class="text-sm text-gray-600 mb-2">
+                            IEEE Conference | 2025 3rd International Conference on Intelligent Systems, Advanced Computing and Communication (ISACC) | February 2025<br>
+                            DOI: <a href="https://doi.org/10.1109/ISACC65211.2025.10969261" class="underline text-black hover:text-gray-700">10.1109/ISACC65211.2025.10969261</a>
+                        </p>
+                        <p class="mb-2">
+                            This study uses CNNs with feature fusion techniques to classify potato diseases from leaf images. Among Early, Intermediate, and Late Fusion methods, Late Fusion showed the highest accuracy and robustness, especially with class imbalance. The work highlights the impact of fusion and data augmentation in enhancing plant disease detection.
+                        </p>
+                        <a href="https://www.researchgate.net/publication/391035335_Improving_Potato_Disease_Classification_with_Convolutional_Neural_Networks_and_Feature_Fusion" class="text-black underline hover:text-gray-700">View Publication</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">KEY EXPERTISE</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Technical Skills -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-code mr-3"></i> Technical Skills
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill bg-black text-white px-3 py-1 rounded-full">Embedded C</span>
+                        <span class="skill-pill bg-black text-white px-3 py-1 rounded-full">C Programming</span>
+                        <span class="skill-pill bg-black text-white px-3 py-1 rounded-full">Simulink</span>
+                        <span class="skill-pill bg-black text-white px-3 py-1 rounded-full">MATLAB</span>
+                        <span class="skill-pill bg-black text-white px-3 py-1 rounded-full">Python</span>
+                        <span class="skill-pill bg-black text-white px-3 py-1 rounded-full">Machine Learning</span>
+                        <span class="skill-pill bg-black text-white px-3 py-1 rounded-full">OOPs</span>
+                        <span class="skill-pill bg-black text-white px-3 py-1 rounded-full">Communication Systems</span>
+                    </div>
+                </div>
+                
+                <!-- Project Experience -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-project-diagram mr-3"></i> Project Experience
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check mt-1 mr-2 text-black"></i>
+                            <span>ADAS-based lane change system development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check mt-1 mr-2 text-black"></i>
+                            <span>Battery life prediction using ML models</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check mt-1 mr-2 text-black"></i>
+                            <span>Circuit design for over-voltage protection</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check mt-1 mr-2 text-black"></i>
+                            <span>Library management system development</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Research & Publications -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-book-open mr-3"></i> Research & Publications
+                    </h3>
+                    <p class="mb-3">Published research paper on battery life prediction in Sigma Journal of Engineering and Natural Sciences.</p>
+                    <p>Experience in:</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li>Data collection and preprocessing</li>
+                        <li>Feature selection and engineering</li>
+                        <li>Model evaluation and optimization</li>
+                        <li>Technical writing and documentation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-black text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">GET IN TOUCH</h2>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-xl font-semibold mb-4">CONTACT INFORMATION</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="contact-icon bg-white text-black w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Phone</p>
+                                <p>+91-8468804814</p>
+                                <p>+91-7507325720</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="contact-icon bg-white text-black w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Email</p>
+                                <p>anushka.parkhi@mitaoe.ac.in</p>
+                                <p>anushka1651065@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="contact-icon bg-white text-black w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Location</p>
+                                <p>Pune, Maharashtra, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4">SEND A MESSAGE</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-1">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-white">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-white">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-white"></textarea>
+                        </div>
+                        <button type="submit" class="bg-white text-black px-6 py-2 rounded hover:bg-gray-200 transition">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-xl font-bold">ANUSHKA PARKHI</p>
+                    <p>Electronics & Telecommunication Engineer</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="contact-icon bg-gray-700 hover:bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="contact-icon bg-gray-700 hover:bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="contact-icon bg-gray-700 hover:bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2024 Anushka Parkhi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=parkhi11/parkhi" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
